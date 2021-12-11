@@ -1,5 +1,8 @@
 # better-csv
 
+```
+npm install better-csv
+```
 Accepts csv data in this form:
 
 ```
