@@ -17,4 +17,23 @@ const baseCsvConverter = (data, modifier) => {
   return newCSV;
 };
 
-module.exports = { baseCsvConverter };
+export const baseCsvChecker = (data, checker) => {
+  const newCSVErrors = [];
+  data.forEach((row, index) => {
+    if (!index === 0) {
+      row.forEach((cell, index) => {
+        if (cell === checker) {
+          newCSVErrors.push(`Row ${index + 1} Column ${index + 1}`);
+        }
+      });
+    }
+  });
+  let message = "";
+  newCSVErrors.forEach((error) => {
+    message += error;
+  });
+  console.log(newCSVErrors);
+  return newCSVErrors;
+};
+
+module.exports = { baseCsvConverter, baseCsvChecker };

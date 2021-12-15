@@ -1,4 +1,4 @@
-const { baseCsvConverter } = require("./BaseFunctions");
+const { baseCsvConverter, baseCsvChecker } = require("./BaseFunctions");
 const { removeSpaces, capitalizeString } = require("./HelperFunctions");
 const { data } = require("./constants");
 
@@ -57,13 +57,16 @@ const cellsToSnakeCase = (data) => {
   return baseCsvConverter(data, toSnakeCase);
 };
 
-//cellsToLowerCase(data);
-//cellsToUpperCase(data);
-//cellsRemoveSpaces(data);
-//cellsToCamelCase(data);
-//cellsToPascalCase(data);
-//cellsToKebabCase(data);
-//cellsToSnakeCase(data);
+const checkCellsEmptyStrings = (data) => {
+  baseCsvChecker(data, "");
+};
+// cellsToLowerCase(data);
+// cellsToUpperCase(data);
+// cellsRemoveSpaces(data);
+// cellsToCamelCase(data);
+// cellsToPascalCase(data);
+// cellsToKebabCase(data);
+// cellsToSnakeCase(data);
 
 module.exports = {
   cellsToLowerCase,

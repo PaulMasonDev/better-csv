@@ -3,6 +3,7 @@
 ```
 npm install better-csv
 ```
+
 Accepts csv data in this form:
 
 ```
@@ -14,6 +15,7 @@ const data = [
 ```
 
 Current Functions (will skip first header element of data array):
+
 ```
 cellsToLowerCase(data),
 cellsToUpperCase(data),
@@ -22,4 +24,5 @@ cellsToCamelCase(data),
 cellsToPascalCase(data),
 cellsToKebabCase(data),
 cellsToSnakeCase(data),
+checkCellsEmptyStrings(data)
 ```
